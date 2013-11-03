@@ -1,0 +1,2 @@
+version=2
+https://bitbucket.org/agronholm/apscheduler/downloads .*/v(\d\S*)\.tar\.gz

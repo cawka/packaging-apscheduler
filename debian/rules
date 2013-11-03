@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+DESTDIR=$(CURDIR)/debian/python-apscheduler/
+
+%:
+	dh ${@} --with python2
+
+override_dh_clean:
+	dh_clean
+	rm -f $(CURDIR)/APScheduler.egg-info/PKG-INFO
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod a-x $(DESTDIR)/usr/share/pyshared/APScheduler-*.egg-info/*
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9
+
+.PHONY: override_dh_clean override_dh_fixperms override_dh_builddeb
