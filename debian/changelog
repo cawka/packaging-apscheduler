@@ -1,3 +1,9 @@
+apscheduler (2.1.1-1ppa1~precise1) precise; urgency=low
+
+  * Making release for precise
+
+ -- Alexander Afanasyev <alexander.afanasyev@ucla.edu>  Wed, 06 Nov 2013 13:31:20 -0800
+
 apscheduler (2.1.1-1) unstable; urgency=low
 
   * New upstream release (closes: #727115).
